@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const balanceValue = document.getElementById('balance-value');
     const betAmountInput = document.getElementById('bet-amount');
     const betButton = document.getElementById('bet-button');
-    const dealButton = document.getElementById('deal-button');
     const hitButton = document.getElementById('hit-button');
     const standButton = document.getElementById('stand-button');
     const dealerHandValueDisplay = document.getElementById('dealer-hand-value');
@@ -165,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         hitButton.disabled = false;
         standButton.disabled = false;
-        dealButton.disabled = true;
         betButton.disabled = true;
 
         gameMessage.innerText = '';
@@ -200,6 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleStand() {
+        hitButton.disabled = true;
+        standButton.disabled = true;
+
+        // Dealer's turn
         while (calculateHandValue(dealerHand) < 17) {
             const newCard = dealCard();
             dealerHand.push(newCard);
@@ -232,7 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function endGame() {
         hitButton.disabled = true;
         standButton.disabled = true;
-        dealButton.disabled = false;
         betButton.disabled = false;
         gameEnded = true;
 
@@ -245,10 +246,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
-    // Rewarded interstitial
+	// Rewarded interstitial
         
-show_9108066().then(() => {
+	show_9108066().then(() => {
 	 function showAd() {
         Telegram.WebApp.showAlert("Assista a um anúncio para ganhar créditos extras!", () => {
             balance += 10;
@@ -257,11 +257,10 @@ show_9108066().then(() => {
     }
     // You need to add your user reward function here, which will be executed after the user watches the ad.
     // For more details, please refer to the detailed instructions.
-    alert('You have seen an ad!');
+    alert('You have seen an ad! Bonus + 10');
 })
 
     betButton.addEventListener('click', handleBet);
-    dealButton.addEventListener('click', startGame);
     hitButton.addEventListener('click', handleHit);
     standButton.addEventListener('click', handleStand);
 });

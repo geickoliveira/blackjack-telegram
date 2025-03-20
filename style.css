@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #0a5c0a; /* Verde escuro semelhante a feltro de mesa */
+    background-color: #0a5c0a;
     margin: 0;
     padding: 0;
     display: flex;
@@ -27,7 +27,7 @@ body {
 
 header,
 footer {
-    background-color: #2E7D32; /* Verde escuro */
+    background-color: #2E7D32;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -50,7 +50,7 @@ main {
 
 .hand h2 {
     font-size: 1.5em;
-    color: #2E7D32; /* Verde escuro */
+    color: #2E7D32;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -136,7 +136,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50;
     color: white;
     cursor: pointer;
     font-size: 1em;
@@ -145,7 +145,7 @@ button {
 }
 
 button:hover {
-    background-color: #388E3C; /* Verde escuro */
+    background-color: #388E3C;
     transform: translateY(-2px);
 }
 
