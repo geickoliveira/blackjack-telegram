@@ -33,14 +33,14 @@ header,
 footer {
     background-color: #2E7D32;
     color: #fff;
-    padding: 20px;
+    padding: 0px 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
     margin: 01;
-    font-size: 2.1em;
+    font-size: 2.3em;
     font-family: 'Press Start 2P', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
