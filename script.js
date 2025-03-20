@@ -246,19 +246,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-	// Rewarded interstitial
-        
-	show_9108066().then(() => {
-	 function showAd() {
-        Telegram.WebApp.showAlert("Assista a um anúncio para ganhar créditos extras!", () => {
+    function showAd() {
+        show_9108066().then(() => {
+            // Adiciona créditos extras após o anúncio
             balance += 10;
             balanceValue.innerText = balance;
+            alert('Você ganhou 10 créditos extras por assistir ao anúncio!');
+        }).catch((error) => {
+            console.error('Erro ao exibir o anúncio:', error);
         });
     }
-    // You need to add your user reward function here, which will be executed after the user watches the ad.
-    // For more details, please refer to the detailed instructions.
-    alert('You have seen an ad! Bonus + 10');
-})
 
     betButton.addEventListener('click', handleBet);
     hitButton.addEventListener('click', handleHit);
