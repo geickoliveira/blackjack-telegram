@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameMessage = document.getElementById('game-message');
 
     function createDeck() {
-        const suits = ["Copas", "Ouros", "Paus", "Espadas"];
+        const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
         const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
         const deck = [];
 
@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getSuitSymbol(suit) {
         switch (suit) {
-            case "Copas":
+            case "Hearts":
                 return "♥";
-            case "Ouros":
+            case "Diamonds":
                 return "♦";
-            case "Paus":
+            case "Clubs":
                 return "♣";
-            case "Espadas":
+            case "Spades":
                 return "♠";
             default:
                 return "";
@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getSuitColor(suit) {
         switch (suit) {
-            case "Copas":
-            case "Ouros":
+            case "Hearts":
+            case "Diamonds":
                 return "red";
             default:
                 return "black";
@@ -176,13 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleBet() {
         betAmount = parseInt(betAmountInput.value);
         if (isNaN(betAmount) || betAmount <= 0 || betAmount > balance) {
-            gameMessage.innerText = 'Aposta inválida!';
+            gameMessage.innerText = 'Invalid bet!';
             return;
         }
 
         balance -= betAmount;
         balanceValue.innerText = balance;
-        gameMessage.innerText = 'Aposta realizada!';
+        gameMessage.innerText = 'Bet placed!';
         startGame();
     }
 
@@ -217,17 +217,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const dealerValue = calculateHandValue(dealerHand);
 
         if (playerValue > 21) {
-            return 'Dealer venceu!';
+            return 'Dealer wins!';
         } else if (dealerValue > 21 || playerValue > dealerValue) {
             balance += betAmount * 2;
             balanceValue.innerText = balance;
-            return 'Jogador venceu!';
+            return 'Player wins!';
         } else if (playerValue === dealerValue) {
             balance += betAmount;
             balanceValue.innerText = balance;
-            return 'Empate!';
+            return 'Push!';
         } else {
-            return 'Dealer venceu!';
+            return 'Dealer wins!';
         }
     }
 
@@ -248,12 +248,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showAd() {
         show_9108066().then(() => {
-            // Adiciona créditos extras após o anúncio
+            // Add extra credits after watching the ad
             balance += 10;
             balanceValue.innerText = balance;
-            alert('Você ganhou 10 créditos extras por assistir ao anúncio!');
+            alert('You earned 10 extra credits for watching the ad!');
         }).catch((error) => {
-            console.error('Erro ao exibir o anúncio:', error);
+            console.error('Error showing ad:', error);
         });
     }
 
