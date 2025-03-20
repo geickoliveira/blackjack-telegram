@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showAd() {
-        show_9108066('pop').then(() => {
+        show_9108066().then(() => {
             // Adiciona créditos extras após o anúncio
             balance += 10;
             balanceValue.innerText = balance;
