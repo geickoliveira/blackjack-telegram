@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
-// Commented out for local testing
-// Telegram.WebApp.ready();
+
+Telegram.WebApp.ready();
 
 document.addEventListener('DOMContentLoaded', () => {
     let deck = [];
@@ -425,16 +425,15 @@ document.addEventListener('DOMContentLoaded', () => {
         gamesPlayed++;
         if (gamesPlayed % 3 === 0) {
             // Commented out for local testing
-            // showAd();
-            
+            showAd();
+            /*
             // Add credits directly for local testing
             balance += 10;
             balanceValue.innerText = balance;
-            alert('You earned 10 extra credits!');
-        }
-    }
+            alert('You earned 10 extra credits!'); */
 
-    /* 
+
+     
     // Function commented out for local testing
     function showAd() {
         show_9108066().then(() => {
@@ -446,7 +445,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error showing ad:', error);
         });
     }
-    */
+            }
+    }
 
     betButton.addEventListener('click', handleBet);
     hitButton.addEventListener('click', handleHit);
