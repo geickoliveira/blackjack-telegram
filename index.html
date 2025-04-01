@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts commented out for local testing -->
+    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
+    <!-- <script src='//whephiwums.com/sdk.js' data-zone='9108066' data-sdk='show_9108066'></script> -->
+    <script type="importmap">
+        {
+            "imports": {
+                "uuid": "https://jspm.dev/uuid"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Blackjack</h1>
+            <div id="balance">Balance: <span id="balance-value">100</span></div>
+        </header>
+
+        <main>
+            <div id="dealer-hand" class="hand">
+                <h2>Dealer</h2>
+                <div id="dealer-cards" class="cards"></div>
+                <div id="dealer-value">Value: <span id="dealer-hand-value">0</span></div>
+            </div>
+
+            <div id="player-hand" class="hand">
+                <h2>Player</h2>
+                <div id="player-cards" class="cards"></div>
+                <div id="player-value">Value: <span id="player-hand-value">0</span></div>
+            </div>
+
+            <div id="insurance-container" style="display: none;">
+                <button id="insurance-button">Insurance</button>
+            </div>
+
+            <div id="game-message"></div>
+            
+            <div id="history-container">
+                <button id="toggle-history">Show History</button>
+                <div id="game-history" style="display: none;">
+                    <h3>Game History</h3>
+                    <ul id="history-list"></ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="bet-controls">
+                <label for="bet-amount">Bet:</label>
+                <input type="number" id="bet-amount" value="10" min="10">
+                <button id="bet-button">Bet</button>
+            </div>
+
+            <div id="game-controls">
+                <button id="hit-button" disabled>Hit</button>
+                <button id="stand-button" disabled>Stand</button>
+                <button id="double-button" disabled>Double Down</button>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

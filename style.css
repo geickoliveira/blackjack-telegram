@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a4300;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23083800'%3E%3Cpath d='M0 0h20v20H0zM20 0h20v20H20zM40 0h20v20H40zM60 0h20v20H60zM80 0h20v20H80zM0 20h20v20H0zM40 20h20v20H40zM80 20h20v20H80zM0 40h20v20H0zM20 40h20v20H20zM40 40h20v20H40zM60 40h20v20H60zM80 40h20v20H80zM0 60h20v20H0zM40 60h20v20H40zM80 60h20v20H80zM0 80h20v20H0zM20 80h20v20H20zM40 80h20v20H40zM60 80h20v20H60zM80 80h20v20H80z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100px 100px;
+}
+
+#app {
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ffd700;
+}
+
+#app:hover {
+    transform: scale(1.02);
+}
+
+header,
+footer {
+    background-color: #0a4300;
+    color: #ffd700;
+    padding: 1px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #ffd700;
+}
+
+header h1 {
+    margin: 01;
+    font-size: 2.3em;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #ffd700;
+}
+
+main {
+    padding: 20px;
+    color: #fff;
+}
+
+.hand {
+    margin-bottom: 20px;
+}
+
+.hand h2 {
+    font-size: 1.8em;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 70px;
+    height: 98px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: 'Press Start 2P', cursive;
+    border: 1px solid #333;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.6);
+}
+
+.card svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card svg rect {
+    stroke: #333;
+    fill: white;
+}
+
+.card svg text {
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    text-anchor: start;
+}
+
+#bet-controls,
+#game-controls {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+#bet-controls label {
+    font-size: 1.2em;
+    color: #ffd700;
+    margin-right: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#bet-controls input[type="number"] {
+    padding: 10px;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    width: 100px;
+    text-align: center;
+    appearance: none;
+    -moz-appearance: textfield;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Press Start 2P', cursive;
+}
+
+#bet-controls input[type="number"]::-webkit-outer-spin-button,
+#bet-controls input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0a4300;
+    color: #ffd700;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    border: 1px solid #ffd700;
+}
+
+button:hover {
+    background-color: #083500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(255, 215, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled {
+    background-color: #333;
+    border-color: #555;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#game-message {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Press Start 2P', cursive;
+}
+
+#history-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#toggle-history {
+    margin-bottom: 15px;
+    font-size: 1em;
+    padding: 10px 15px;
+}
+
+#game-history {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 90%;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffd700;
+}
+
+#game-history h3 {
+    color: #ffd700;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#history-list li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #555;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+#history-list .win {
+    color: #ffd700;
+}
+
+#history-list .loss {
+    color: #ff5555;
+}
+
+#history-list .push {
+    color: #55aaff;
+}
+
+#insurance-container {
+    margin: 15px 0;
+}
+
+#insurance-button {
+    background-color: #db9c00;
+    color: #000;
+    font-size: 1em;
+}
+
+#insurance-button:hover {
+    background-color: #ffd700;
+}
+
+@media (max-width: 600px) {
+    #app {
+        width: 95%;
+    }
+
+    .card {
+        width: 60px;
+        height: 84px;
+        font-size: 1.5em;
+    }
+
+    #bet-controls,
+    #game-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bet-controls input[type="number"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #game-history {
+        max-width: 100%;
+    }
+
+    #history-list {
+        max-height: 150px;
+    }
+}
