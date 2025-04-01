@@ -29,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/blackjack-game.git"
+    "url": "git+https://github.com/geickoliveira/blackjack-telegram.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/blackjack-game/issues"
+    "url": "https://github.com/geickoliveira/blackjack-telegram/issues"
   },
-  "homepage": "https://github.com/yourusername/blackjack-game#readme"
+  "homepage": "https://github.com/geickoliveira/blackjack-telegram#readme"
 } 
