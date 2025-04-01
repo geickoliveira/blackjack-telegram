@@ -431,7 +431,8 @@ document.addEventListener('DOMContentLoaded', () => {
             balance += 10;
             balanceValue.innerText = balance;
             alert('You earned 10 extra credits!'); */
-
+            }
+    }
 
      
     // Function commented out for local testing
@@ -444,8 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).catch((error) => {
             console.error('Error showing ad:', error);
         });
-    }
-            }
     }
 
     betButton.addEventListener('click', handleBet);
