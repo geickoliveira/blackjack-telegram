@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gamesPlayed++;
         if (gamesPlayed % 3 === 0) {
             // Commented out for local testing
-            //showAd();
+            showAd();
             /*
             // Add credits directly for local testing
             balance += 10;
