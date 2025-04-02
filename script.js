@@ -425,14 +425,12 @@ document.addEventListener('DOMContentLoaded', () => {
         gamesPlayed++;
         if (gamesPlayed % 3 === 0) {
             // Commented out for local testing
-            showAd();
+            //showAd();
             /*
             // Add credits directly for local testing
             balance += 10;
             balanceValue.innerText = balance;
             alert('You earned 10 extra credits!'); */
-            }
-    }
 
      
     // Function commented out for local testing
@@ -447,6 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+            }
+    }
+            
     betButton.addEventListener('click', handleBet);
     hitButton.addEventListener('click', handleHit);
     standButton.addEventListener('click', handleStand);
